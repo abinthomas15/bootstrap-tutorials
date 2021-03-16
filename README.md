@@ -83,3 +83,22 @@ These tags are used to get the differnet displays in the browser
 
 #### Invisible Class
 There will not be anything visible but the things will be there
+
+### Margin and padding Sizing
+0 - there will be no padding or margin
+1 - default * 0.25
+2 - default
+3 - default * 0.5
+4 - default * 0.75
+5 - default * 1
+
+#### m - Classes for margin
+#### p - Classes for padding
+#### t - classes that sets padding top or margin top
+#### b - classes that sets padding bottom or margin bottom
+#### l - classes that sets padding left or margin left
+#### r - classes that sets padding right or margin right
+
+* If we want to do padding or margin at both left and right or top and bottom we can use 
+MX and PX for left and Right
+MY and PY for top and Bottom
