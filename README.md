@@ -80,6 +80,3 @@ These tags are used to get the differnet displays in the browser
 * d-inline -> block to Inline 
 * d-block  -> inline to block
 * d-inline-block -> to inline block elements
-*
-*
-*
