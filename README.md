@@ -63,3 +63,23 @@
   Its not taking the value of the default html, but it i taking the value of the parent element
 
   Bootstrap uses rem and ems to get more responsive web site
+
+### CLASSES
+* display-1
+* dispaly-2
+* display-3
+* display-4
+These tags are used to get the differnet displays in the browser
+
+* text-sm-right -> align right to smaller screens 
+* text-md-right -> align right to medium screens
+* text-lg-right -> align right to larger screens
+* text-xl-right -> align right to extra large screens
+
+
+* d-inline -> block to Inline 
+* d-block  -> inline to block
+* d-inline-block -> to inline block elements
+*
+*
+*
