@@ -102,3 +102,7 @@ There will not be anything visible but the things will be there
 * If we want to do padding or margin at both left and right or top and bottom we can use 
 MX and PX for left and Right
 MY and PY for top and Bottom
+
+
+### BTN - The Button Class
+ BTN is the core to the button class and it adds lots of stuff by calling this function.
