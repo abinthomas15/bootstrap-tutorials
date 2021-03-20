@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="style.css" />
     <title>bootstrap theme</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#main-nav" id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
       <div class="container">
         <a href="index.html" class="navbar-brand">LoopLAB</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -233,11 +233,86 @@
       </div>
     </section>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center py-4">
+            <h3>LOOPLAB</h3>
+            <p>Copyright &copy; <span id="year"></span></p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact US</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade text-dark" id="contactModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Contact Us</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-block">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
+    <script>
+      // Get the current year for the copyright
+      $('year').text(new Date().getFullYear());
+
+      // Init scroll spyS
+      $('body').scrollspy({target: '#main-nav'})
+
+           // Add smooth scrolling
+           $('#main-nav a').on('click', function(e){
+        console.log(this)
+        //chech for a hash value
+        if(this.hash !== '') {
+          //prevent default behaviour
+          e.preventDefault();
+
+
+          //store hash
+          const hash = this.hash;
+
+          // Animate smooth scroll
+          $('html, body').animate({
+            scrolltop: $(hash).offset().top,
+          }, 900, function(){
+              window.location.hash = hash;
+
+          });
+        }
+      });
+    </script>
   </body>
 </html>
