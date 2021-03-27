@@ -1,0 +1,84 @@
+body{
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#main-section {
+    background-image: url("./img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw; 
+  object-fit: cover;
+  background-blend-mode: lighten;
+  
+} 
+
+.display-4{
+  width: 48%;
+}
+
+.lead{
+  width: 45%;
+}
+
+.overlay{
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, transparent, #111);
+}
+
+#black-container{
+  background: #111;
+}
+
+#gallery{
+  background-image: url("img/banner2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw; 
+  object-fit: cover;
+  background-blend-mode: soft-light;
+}
+
+#travel{
+  background-color: #111;
+}
+
+#banner3{
+  background-image: url(img/banner3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw; 
+  object-fit: cover;
+  background-blend-mode: soft-light;
+}
+
+.overlay1{
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to top,#111, transparent, #111);
+}
+
+#main-footer{
+  background-color: #111;
+}
+
+.navbar{
+  flex-wrap: nowrap;
+}
+
+#hover-effect img{
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+#hover-effect img:hover{
+  opacity: 1.0;
+}
+
+.text-muted p{
+  font-size: 12px;
+}
